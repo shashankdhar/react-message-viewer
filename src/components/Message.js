@@ -51,18 +51,29 @@ class Message extends Component {
     });
   };
 
+  getTime = () => {
+    let d = new Date(this.props.message.timestamp).toLocaleString('en-us', {
+      day: 'numeric',
+      year: 'numeric',
+      month: 'short'
+    });
+    return d;
+  };
+
   render() {
     const message = this.props.message;
     return (
       <li className="card__item">
         <section className="left_section">
-          <img className="" src={message.avatar} alt={message.handle} />
+          <picture>
+            <img className="" src={message.avatar} alt={message.handle} />
+          </picture>
           <small className="card__item__name js-ripple">{message.handle}</small>
         </section>
         <section className="center_section">
           <div>
             <small>{message.source}</small>
-            <small> | {message.timestamp}</small>
+            <small> | {this.getTime()}</small>
           </div>
           <p className="content">{message.content}</p>
         </section>

@@ -11,7 +11,7 @@
 ## If you dont have have serve installed, run the command below
 npm install -g serve
 
-Run the command below in main directory
+Run the command below in the main directory
 
 serve -s build
 

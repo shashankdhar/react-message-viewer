@@ -50,6 +50,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <nav>
+          <a href="/">
+            <img alt="Home" src="./logo.png" />
+          </a>
+          <a class="nav-view" href="/">
+            MESSAGE VIEWER
+          </a>
+        </nav>
         <h3>Starred: {this.state.countStar}</h3>
         <button onClick={this.toggleTrash}>
           {this.state.isShowTrash
