@@ -1,0 +1,96 @@
+body {
+  margin: 0 15%;
+}
+
+nav {
+  padding: 8px 10px;
+  background-color: #f1f1f1;
+  border: 1px solid #d6d5d5;
+}
+
+button {
+  background-color: #ffffff;
+  border: 1px solid #d6d5d5;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.nav-view {
+  float: right;
+  color: black;
+  padding-top: 5px;
+  text-decoration: none;
+}
+
+.card {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0;
+}
+.card__item {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  /*width: 100%;*/
+  height: calc(100vh / 4 - 30px);
+  box-shadow: 0 2px 1px rgba(170, 170, 170, 0.25);
+  color: #242c33;
+  overflow: hidden;
+  border: 1px solid #d6d5d5;
+  padding: 15px 15px 25px 15px;
+}
+
+.card__item .left_section {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  text-align: center;
+}
+
+.card__item .left_section img {
+  object-fit: contain;
+}
+
+.card__item .center_section {
+  width: 60%;
+  padding: 0 15px;
+}
+
+.card__item .center_section p.content {
+  margin-top: 10px;
+}
+
+.card__item .right_section {
+  width: 20%;
+}
+
+.card__item .right_section button {
+  float: right;
+}
+
+.card__item .right_section button.btn-star {
+  background-color: #b7c11e;
+  color: #ffffff;
+  font-weight: 600;
+  border: 0;
+}
+
+.card__item .right_section button.btn-trash {
+  background-color: #ff4007;
+  color: #ffffff;
+  border: 0;
+}
+
+.card__item__name {
+  color: black;
+  margin-top: 5px;
+}
+
+.card__item:nth-of-type(n):not(:first-child) {
+  margin-top: 24px;
+}
